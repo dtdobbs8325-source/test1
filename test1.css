@@ -1,0 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    color: green;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+}
+
+.container {
+    background-color: lightgray;
+    color: green;
+    border: 1px solid black;
+    margin: 1em;
+}
+
