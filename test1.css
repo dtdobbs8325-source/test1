@@ -55,3 +55,21 @@ hr {
     text-align: center;
 }
 
+#footer {
+
+}
+
+.nav-link {
+    color: rgb(8, 237, 8) !important
+}
+
+.footer-paragraph {
+    color: rgb(8, 237, 8) !important;
+}
+
+footer {
+    background-color: black !important;
+    color: rgb(8, 237, 8) !important;
+    /* border: 1px solid black; */
+    /* margin: 1em; */
+}
