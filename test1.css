@@ -1,75 +1,96 @@
-body {
-    background-color: black;
-    color: white;
+/* Color Palette Variables */
+:root {
+    --bg-dark: #000000;
+    --accent-green: #08ed08;
+    --accent-red: #ff4d4d;
+    --card-bg: #d3d3d3;
+    --card-text: #008000;
+    --banner-outer-bg: #808080;
 }
 
+/* Base Styles */
+body {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+hr {
+    border-color: #ffffff;
+    opacity: 0.5;
+}
+
+/* Typography Overrides */
 h1 {
-    color: green;
+    color: var(--accent-green);
     text-align: center;
 }
 
 h2 {
-    color: red;
+    color: var(--accent-red);
 }
 
-.container {
-    background-color: lightgray;
-    color: green;
-    border: 1px solid black;
-    margin: 1em;
+/* Navbar (Matching Footer Theme) */
+.navbar {
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid #333333;
 }
 
-#loginForm {
-    /* border: 2px solid green; */
-    margin: 1em;
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: var(--accent-green);
+    transition: opacity 0.2s ease-in-out;
 }
 
-/* .form-label {
-    padding: 0.5em;
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+    color: var(--accent-green);
+    opacity: 0.75;
 }
 
-.form-control {
-    margin: 1em;
-} */
-
-hr {
-    border: 1px solid white;
+/* Navbar Mobile Toggler Customization */
+.navbar-toggler {
+    border-color: var(--accent-green);
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2308ed08' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hero / Banner Area */
 #banner {
-    background-color: gray !important;
-    color: green !important;
-    /* border: 1px solid black; */
-    /* margin: 1em; */
+    background-color: var(--banner-outer-bg);
 }
 
 #banner-inner {
-    background-color: black !important;
-    color: rgb(8, 237, 8) !important;
-    /* border: 1px solid black; */
-    /* margin: 1em; */
+    background-color: var(--bg-dark);
 }
 
-#banner h1 {
-    color: rgb(8, 237, 8) !important;
-    text-align: center;
+#banner-inner h1 {
+    color: var(--accent-green);
 }
 
-#footer {
-
+/* Content Cards */
+.content-card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    border: 1px solid var(--bg-dark);
 }
 
-.nav-link {
-    color: rgb(8, 237, 8) !important
-}
-
-.footer-paragraph {
-    color: rgb(8, 237, 8) !important;
-}
-
+/* Navigation & Footer */
 footer {
-    background-color: black !important;
-    color: rgb(8, 237, 8) !important;
-    /* border: 1px solid black; */
-    /* margin: 1em; */
+    background-color: var(--bg-dark);
+}
+
+footer .nav-link,
+footer .footer-paragraph {
+    color: var(--accent-green);
+    transition: opacity 0.2s ease-in-out;
+}
+
+footer .nav-link:hover,
+footer .nav-link:focus {
+    color: var(--accent-green);
+    opacity: 0.75;
 }

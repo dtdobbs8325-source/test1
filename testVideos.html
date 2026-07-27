@@ -4,122 +4,138 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test 1</title>
+    <title>Test Videos</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="test1.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="page-header my-3">
-            <h1>Test Videos</h1>
+    <!-- Navbar (Styled like Footer) -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Test1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left-aligned Main Links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testBlog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="testVideos.html">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testImages.html">Images</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testAudio.html">Audio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testGames.html">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testShop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testContact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Right-aligned Authentication & Account Items -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
+                    <!-- Logged-Out State -->
+                    <li class="nav-item logged-out-view">
+                        <a class="nav-link fw-semibold" href="testLogin.html">Login</a>
+                    </li>
+
+                    <!-- Logged-In State (Hidden by default via d-none) -->
+                    <li class="nav-item dropdown logged-in-view d-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            My Account
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="testProfile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="testSettings.html">Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#" id="logoutBtn">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 bg-dark text-light border-secondary" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
+    </nav>
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="test1.html">Test1</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- Page Title Header -->
+    <header class="page-header container my-4 text-center">
+        <h1>Test Videos</h1>
+    </header>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left-aligned Main Links -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="test1.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testBlog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testVideos.html">Videos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testImages.html">Images</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testAudio.html">Audio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testGames.html">Games</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testShop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="testContact.html">Contact</a>
-                        </li>
-                    </ul>
+    <!-- Main Content Sections -->
+    <main class="container my-5" id="content-sections">
+        <article class="content-card my-4 p-4 rounded">
+            <h2>All Users Can See This Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
+                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
+        </article>
 
-                    <!-- Right-aligned Authentication & Account Items -->
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
-                        <!-- Logged-Out State -->
-                        <li class="nav-item logged-out-view">
-                            <a class="nav-link fw-semibold text-primary" href="testLogin.html">Login</a>
-                        </li>
+        <article class="content-card my-4 p-4 rounded">
+            <h2>All Members Can See This Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
+                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
+        </article>
 
-                        <!-- Logged-In State (Hidden by default via d-none) -->
-                        <li class="nav-item dropdown logged-in-view d-none">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                My Account
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="testProfile.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="testSettings.html">Settings</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item text-danger" href="#" id="logoutBtn">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+        <article class="content-card my-4 p-4 rounded">
+            <h2>All Premium Members Can See This Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
+                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
+        </article>
 
-                    <!-- Search Form -->
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        <article class="content-card my-4 p-4 rounded">
+            <h2>All Admins Can See This Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
+                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
+        </article>
+    </main>
 
-        <div class="container-fluid" id="div-container">
-            <div class="container my-4" id="div-2">
-                <h2>All Users Can See this Section</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                    nunc
-                    nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-            </div>
+    <hr class="my-4">
 
-            <div class="container my-4" id="div-3">
-                <h2>All Members Can See this Section</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                    nunc
-                    nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-            </div>
+    <!-- Footer -->
+    <footer class="py-3 my-4 container">
+        <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="testBlog.html" class="nav-link px-2">Blog</a></li>
+            <li class="nav-item"><a href="testVideos.html" class="nav-link px-2">Video</a></li>
+            <li class="nav-item"><a href="testImages.html" class="nav-link px-2">Images</a></li>
+            <li class="nav-item"><a href="testAudio.html" class="nav-link px-2">Audio</a></li>
+            <li class="nav-item"><a href="testGames.html" class="nav-link px-2">Games</a></li>
+            <li class="nav-item"><a href="testShop.html" class="nav-link px-2">Shop</a></li>
+            <li class="nav-item"><a href="testContact.html" class="nav-link px-2">Contact</a></li>
+            <li class="nav-item"><a href="testLogin.html" class="nav-link px-2">Login</a></li>
+        </ul>
+        <p class="footer-paragraph text-center">© 2025 Company, Inc</p>
+    </footer>
 
-            <div class="container my-4" id="div-4">
-                <h2>All Premium Members Can See this Section</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                    nunc
-                    nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-            </div>
-
-            <div class="container my-4" id="div-1">
-                <h2>All Admins Can See this Section</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                    nunc
-                    nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-            </div>
-        </div><!-- End of div-container -->
-    </div>
-
-    <!-- Single Bootstrap JS Bundle (Includes Popper) -->
+    <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
