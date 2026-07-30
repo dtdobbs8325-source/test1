@@ -90,34 +90,204 @@
         <h1>Test Videos</h1>
     </header>
 
-    <!-- Main Content Sections -->
     <main class="container my-5" id="content-sections">
-        <article class="content-card my-4 p-4 rounded">
-            <h2>All Users Can See This Section</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-        </article>
+    <!-- Featured Hero Video -->
+    <section class="row mb-5">
+        <h2>Featured Hero Video</h2>
+        <div class="col-12">
+            <div class="card bg-dark text-light border-secondary shadow overflow-hidden">
+                <div class="ratio ratio-16x9">
+                    <video src="assets/placeholderVideo1.mp4" controls preload="metadata"></video>
+                </div>
+                <div class="card-body">
+                    <span class="badge bg-primary mb-2">Featured</span>
+                    <h2 class="card-title h3">Featured Video Title</h2>
+                    <p class="card-text text-secondary">Detailed description of the featured video goes here. Great for highlighting recent projects, high-priority media, or trailers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <article class="content-card my-4 p-4 rounded">
-            <h2>All Members Can See This Section</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-        </article>
+    <!-- Video Grid -->
+    <section>
+        <h2>Layout 1</h2>
+        <h3 class="mb-4">All Videos</h3>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            
+            <!-- Video Card 1 -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border-secondary shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Video Title 1</h5>
+                        <p class="card-text text-secondary small flex-grow-1">Short summary of the video content or topic covered.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-secondary">
+                            <span class="badge bg-secondary">Public</span>
+                            <small class="text-secondary">3:45</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <article class="content-card my-4 p-4 rounded">
-            <h2>All Premium Members Can See This Section</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-        </article>
+            <!-- Video Card 2 (Member Exclusive) -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border-secondary shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Member Exclusive Video</h5>
+                        <p class="card-text text-secondary small flex-grow-1">Exclusive footage or tutorial for logged-in members.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-secondary">
+                            <span class="badge bg-info text-dark">Members</span>
+                            <small class="text-secondary">5:12</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <article class="content-card my-4 p-4 rounded">
-            <h2>All Admins Can See This Section</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies lacinia,
-                nunc nisl aliquam nisl, eget ultricies nunc nisl eget nunc.</p>
-        </article>
-    </main>
+            <!-- Video Card 3 (Premium) -->
+            <div class="col">
+                <div class="card h-100 bg-dark text-light border-secondary shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Premium Content</h5>
+                        <p class="card-text text-secondary small flex-grow-1">Deep dive walkthrough reserved for premium subscribers.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top border-secondary">
+                            <span class="badge bg-warning text-dark">Premium</span>
+                            <small class="text-secondary">12:30</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+<br>
+<h2>Layout 2</h2>
+<main class="container my-5" id="content-sections">
+
+    <!-- Tier 1: Public Videos -->
+    <section class="content-card mb-5 p-4 rounded bg-dark text-light border border-secondary">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Public Videos</h2>
+            <span class="badge bg-success">Accessible to Everyone</span>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                    <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                </div>
+                <h5 class="mt-2 h6">Getting Started</h5>
+            </div>
+            <div class="col">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                    <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                </div>
+                <h5 class="mt-2 h6">Public Reel</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tier 2: Member Videos -->
+    <section class="content-card mb-5 p-4 rounded bg-dark text-light border border-secondary">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Member Videos</h2>
+            <span class="badge bg-info text-dark">Members Only</span>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                    <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                </div>
+                <h5 class="mt-2 h6">Member Vlog #1</h5>
+            </div>
+            <div class="col">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                    <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                </div>
+                <h5 class="mt-2 h6">Behind the Scenes</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tier 3: Premium Videos -->
+    <section class="content-card mb-5 p-4 rounded bg-dark text-light border border-secondary">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2>Premium Content</h2>
+            <span class="badge bg-warning text-dark">Premium Tier</span>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+            <div class="col">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                    <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                </div>
+                <h5 class="mt-2 h6">4K Extended Cut</h5>
+            </div>
+        </div>
+    </section>
+
+</main>
+<br>
+<h2>Layout 3</h2>
+<main class="container my-5" id="content-sections">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+            <!-- Video Feed Item -->
+            <article class="card bg-dark text-light border-secondary mb-4 shadow-sm">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="ratio ratio-16x9 rounded-start overflow-hidden">
+                            <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary">Public</span>
+                                <small class="text-secondary">Posted July 2026</small>
+                            </div>
+                            <h4 class="card-title">Video Entry Title</h4>
+                            <p class="card-text text-secondary">A concise description explaining what this video is about, giving users context before watching.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Feed Item -->
+            <article class="card bg-dark text-light border-secondary mb-4 shadow-sm">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5">
+                        <div class="ratio ratio-16x9 rounded-start overflow-hidden">
+                            <video src="assets/placeholderVideo1.mp4" class="object-fit-cover" controls preload="metadata"></video>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-warning text-dark">Premium</span>
+                                <small class="text-secondary">Posted June 2026</small>
+                            </div>
+                            <h4 class="card-title">Pro Tutorial & Breakdown</h4>
+                            <p class="card-text text-secondary">Full walkthrough of the project setup, workflow, and deployment strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</main>
 
     <hr class="my-4">
+    
+    
 
     <!-- Footer -->
     <footer class="py-3 my-4 container">
