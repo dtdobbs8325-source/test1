@@ -24,4 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all video elements on the page
+    const videos = document.querySelectorAll('video');
 
+    videos.forEach(video => {
+        video.addEventListener('play', (event) => {
+            // Pause every video except the one that just started playing
+            videos.forEach(otherVideo => {
+                if (otherVideo !== event.target && !otherVideo.paused) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+});
